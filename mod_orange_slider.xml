@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+    <name>Orange Slider</name>
+    <author>Boyko Dmitry</author>
+    <creationDate>25.04.2018</creationDate>
+    <authorEmail>mail@itdix.net</authorEmail>
+    <authorUrl>http://itdix.net</authorUrl>
+    <version>1.0.0</version>
+    <description>MOD_ORANGE_SLIDER_DESCRIPTION</description>
+    <files>
+        <filename module="mod_orange_slider">mod_orange_slider.php</filename>
+		<filename>index.html</filename>
+        <filename>mod_orange_slider.xml</filename>
+        <filename>helper.php</filename>
+        <folder>tmpl</folder>
+        <folder>face</folder>
+		
+    </files>
+	<languages folder="language">
+		<language tag="ru-RU">ru-RU/ru-RU.mod_orange_slider.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.mod_orange_slider.sys.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_orange_slider.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_orange_slider.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params" addfieldpath="">
+			<fieldset name="basic">
+                <field name="FolderImages" label="MOD_ORANGE_SLIDER_PATH" type="text" default="slider"  description="MOD_ORANGE_SLIDER_PATH_HELP" />
+                <field name="Style" type="list" default="move" label="MOD_ORANGE_SLIDER_STYLE" description="MOD_ORANGE_SLIDER_STYLE_HELP">
+                    <option value="move">MOD_ORANGE_SLIDER_MOVE</option>
+                    <option value="extinction">MOD_ORANGE_SLIDER_EXTINCTION</option>
+                    <option value="transition">MOD_ORANGE_SLIDER_TRANSITION</option>
+                </field>
+				<field name="SpeedInterval" label="MOD_ORANGE_SLIDER_SPEED" type="text" default="2000"  description="MOD_ORANGE_SLIDER_SPEED_HELP" />
+                <field name="AutoMove" type="radio" default="1" label="MOD_ORANGE_SLIDER_AUTO" description="MOD_ORANGE_SLIDER_AUTO_НELP" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="AutoInterval" label="MOD_ORANGE_SLIDER_AUTO_INTERVAL" type="text" default="3000"  description="MOD_ORANGE_SLIDER_AUTO_INTERVAL_HELP" />
+                
+				<field name="AutoSize" type="radio" default="0" label="MOD_ORANGE_SLIDER_SIZE" description="MOD_ORANGE_SLIDER_SIZE_HELP" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="Width" label="MOD_ORANGE_SLIDER_WIDTH" type="text" default="1000"  description="MOD_ORANGE_SLIDER_WIDTH_HELP" />
+				<field name="Height" label="MOD_ORANGE_SLIDER_HIGHT" type="text" default="500"  description="MOD_ORANGE_SLIDER_HIGHT_HELP" />
+				<field name="ButtonView" type="radio" default="1" label="MOD_ORANGE_SLIDER_BUTTON" description="MOD_ORANGE_SLIDER_BUTTON_HELP" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="Sort" type="list" default="asc" label="MOD_ORANGE_SLIDER_SORT" description="MOD_ORANGE_SLIDER_SORT_HELP">
+                    <option value="asc">MOD_ORANGE_SLIDER_ASC</option>
+					<option value="dsc">MOD_ORANGE_SLIDER_DSC</option>
+                </field>
+				<field name="BodyScript" type="radio" default="0" label="MOD_ORANGE_SLIDER_BODY_SCRIPT" description="MOD_ORANGE_SLIDER_BODY_SCRIPT_HELP" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+
+ 
+		</fields>
+		
+	</config>
+	
+	<updateservers>
+		<server type="extension" priority="1" name="Orange Slider">http://itdix.net/update/mod_orange_slider/update.xml</server>
+	</updateservers>
+	
+</extension>
